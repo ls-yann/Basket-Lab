@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Une bibliothèque simple et rapide pour trouver le bon entraînement de basket." />
+    <title>Basket Lab — bibliothèque d'entraînements</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script defer src="assets/js/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Basket Lab, accueil">
+        <span class="brand-mark">BL</span>
+        <span><strong>Basket Lab</strong><small>La séance, sans détour.</small></span>
+      </a>
+      <nav class="topnav" aria-label="Navigation principale">
+        <a class="active" href="#bibliotheque">Bibliothèque</a>
+        <a href="#bibliotheque">PDF</a>
+        <a href="tools/document-import.html">Importer</a>
+        <button class="favorites-button" type="button" data-action="show-favorites">
+          <span aria-hidden="true">★</span> Mes favoris <b id="favorites-count">0</b>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Bibliothèque coach</p>
+          <h1>Trouvez votre prochain <em>entraînement.</em></h1>
+          <p class="hero-intro">Des exercices concrets, classés par intention. Cherchez une compétence, choisissez un niveau, et passez à l'action.</p>
+          <form class="search" id="search-form" role="search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <label class="sr-only" for="search-input">Rechercher un entraînement</label>
+            <input id="search-input" type="search" placeholder="Ex : tir, défense, transition..." autocomplete="off" />
+            <kbd>⌘ K</kbd>
+          </form>
+          <div class="quick-searches" aria-label="Recherches rapides">
+            <span>Populaire :</span>
+            <button type="button" data-search="tir">Tir</button>
+            <button type="button" data-search="défense">Défense</button>
+            <button type="button" data-search="dribble">Dribble</button>
+            <button type="button" data-search="jeunes">Jeunes</button>
+          </div>
+        </div>
+        <div class="hero-stat" aria-label="Statistiques de la bibliothèque">
+          <span class="stat-number" id="training-total">9</span>
+          <span class="stat-label">fiches<br />disponibles</span>
+          <div class="stat-rule"></div>
+          <span class="stat-note">De la motricité<br />à la tactique.</span>
+        </div>
+      </section>
+
+      <section class="library" id="bibliotheque" aria-labelledby="library-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Explorer</p>
+            <h2 id="library-title">Les entraînements</h2>
+          </div>
+          <p class="result-count" id="result-count"></p>
+        </div>
+        <div class="library-layout">
+          <aside class="filters" aria-label="Filtres">
+            <div class="filter-heading"><span>Affiner la recherche</span><button type="button" id="reset-filters">Réinitialiser</button></div>
+            <fieldset><legend>Catégorie</legend><div id="category-filters"></div></fieldset>
+            <fieldset>
+              <legend>Niveau</legend>
+              <label><input type="checkbox" value="Débutant" data-filter="level" /> <span>Débutant</span></label>
+              <label><input type="checkbox" value="Intermédiaire" data-filter="level" /> <span>Intermédiaire</span></label>
+              <label><input type="checkbox" value="Avancé" data-filter="level" /> <span>Avancé</span></label>
+            </fieldset>
+            <fieldset>
+              <legend>Durée</legend>
+              <label><input type="checkbox" value="court" data-filter="duration" /> <span>Moins de 15 min</span></label>
+              <label><input type="checkbox" value="standard" data-filter="duration" /> <span>15 à 30 min</span></label>
+              <label><input type="checkbox" value="long" data-filter="duration" /> <span>Plus de 30 min</span></label>
+            </fieldset>
+          </aside>
+          <div class="results-area">
+            <div class="toolbar">
+              <div class="view-tabs" role="tablist" aria-label="Filtrer les fiches">
+                <button class="tab active" type="button" data-tab="all" role="tab">Toutes les fiches</button>
+                <button class="tab" type="button" data-tab="favorites" role="tab">Favoris <span id="tab-favorites-count">0</span></button>
+              </div>
+              <label class="sort-label">Trier par
+                <select id="sort-select">
+                  <option value="recommended">Recommandés</option>
+                  <option value="recent">Plus récents</option>
+                  <option value="duration">Durée</option>
+                </select>
+              </label>
+            </div>
+            <div class="cards" id="cards" aria-live="polite"></div>
+            <div class="empty-state" id="empty-state" hidden>
+              <span class="empty-icon">⌕</span>
+              <h3>Aucun entraînement trouvé</h3>
+              <p>Essayez un autre mot-clé ou réinitialisez les filtres.</p>
+              <button class="button button-outline" type="button" id="empty-reset">Réinitialiser les filtres</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <dialog id="detail-dialog" class="detail-dialog">
+      <button class="dialog-close" type="button" data-action="close-dialog" aria-label="Fermer">×</button>
+      <div id="dialog-content"></div>
+    </dialog>
+    <div class="toast" id="toast" role="status"></div>
+  </body>
+</html>

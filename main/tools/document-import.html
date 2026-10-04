@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Importer un PDF — Basket Lab</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <script defer src="document-import.js"></script>
+  </head>
+  <body class="import-page">
+    <main class="import-shell">
+      <a class="back-link" href="../index.html">← Retour à Basket Lab</a>
+      <p class="eyebrow">Outil de gestion</p>
+      <h1>Ajouter un document <em>PDF.</em></h1>
+      <p class="import-intro">Préparez un nouveau document pour la bibliothèque en quelques secondes. L’outil génère le nom, le chemin et la ligne à ajouter à l’index.</p>
+
+      <form class="import-form" id="import-form">
+        <label class="upload-drop" for="pdf-file">
+          <span class="upload-symbol">↑</span>
+          <strong id="file-label">Choisir un fichier PDF</strong>
+          <small>Glissez-déposez un fichier ou cliquez ici</small>
+          <input id="pdf-file" type="file" accept="application/pdf,.pdf" required />
+        </label>
+        <div class="import-grid">
+          <label>Catégorie
+            <select id="category">
+              <option>Défense</option>
+              <option>Attaque</option>
+              <option>Technique</option>
+              <option>Tactique</option>
+              <option>Physique</option>
+              <option>Jeunes</option>
+              <option>Reprise</option>
+              <option>Clinics</option>
+              <option>Ressources</option>
+            </select>
+          </label>
+          <label>Nom affiché
+            <input id="display-name" type="text" placeholder="Ex : Défense du pick and roll" />
+          </label>
+        </div>
+        <button class="import-button" type="submit">Préparer l’import ↓</button>
+      </form>
+
+      <section class="import-result" id="import-result" hidden aria-live="polite">
+        <p class="eyebrow">Import préparé</p>
+        <h2 id="result-title"></h2>
+        <dl>
+          <div><dt>Fichier à déposer dans</dt><dd id="result-path"></dd></div>
+          <div><dt>Entrée à ajouter dans documents.json</dt><dd id="result-json"></dd></div>
+        </dl>
+        <div class="result-actions">
+          <button class="button button-outline" type="button" id="copy-json">Copier l’entrée JSON</button>
+          <button class="button button-outline" type="button" id="download-json">Télécharger l’entrée JSON</button>
+        </div>
+        <p class="import-help">Après avoir copié le PDF dans le dossier indiqué, ajoutez l’entrée JSON à <code>main/data/documents.json</code>, puis publiez les changements sur GitHub.</p>
+      </section>
+    </main>
+  </body>
+</html>

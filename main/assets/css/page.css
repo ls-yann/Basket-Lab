@@ -1,14 +1,14 @@
-:root { color-scheme: light; --ink:#17202b; --muted:#68727e; --orange:#f26b38; --line:#e5e8eb; --paper:#fff; --background:#f5f6f7; }
+:root { color-scheme: light; --ink:#20362c; --muted:#6f8177; --orange:#e2b72f; --green:#b8d99b; --line:#d7e2d4; --paper:#f8fbf5; --background:#edf2e9; --shadow:10px 10px 24px rgba(91,115,83,.16),-10px -10px 24px rgba(255,255,255,.9); }
 * { box-sizing:border-box; }
 body { margin:0; background:var(--background); color:var(--ink); font:16px/1.65 Inter, ui-sans-serif, system-ui, sans-serif; }
 .page-top { display:flex; justify-content:space-between; align-items:center; gap:20px; max-width:900px; margin:0 auto; padding:24px 28px; }
 .brand { color:var(--ink); font-weight:900; letter-spacing:.08em; text-decoration:none; }
 .page-actions { display:flex; gap:10px; }
-.page-button { border:1px solid var(--line); border-radius:999px; padding:9px 15px; background:var(--paper); color:var(--ink); cursor:pointer; font:inherit; font-size:13px; text-decoration:none; }
-.page-button.primary { background:var(--orange); border-color:var(--orange); color:#fff; }
-.page { max-width:900px; margin:20px auto 70px; padding:48px 60px 70px; background:var(--paper); box-shadow:0 12px 40px #17202b12; }
+.page-button { border:0; border-radius:999px; padding:9px 15px; background:var(--paper); color:var(--ink); box-shadow:var(--shadow); cursor:pointer; font:inherit; font-size:13px; text-decoration:none; }
+.page-button.primary { background:var(--orange); color:var(--ink); box-shadow:inset 2px 2px 4px rgba(255,255,255,.45),4px 4px 10px rgba(91,115,83,.18); }
+.page { max-width:900px; margin:20px auto 70px; padding:48px 60px 70px; background:var(--paper); border-radius:24px; box-shadow:var(--shadow); }
 .page-header { border-bottom:1px solid var(--line); margin-bottom:32px; padding-bottom:24px; }
-.page-category { color:var(--orange); font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+.page-category { color:#507d50; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
 .page-title { margin:8px 0; font-size:clamp(28px,5vw,48px); line-height:1.1; letter-spacing:-.04em; }
 .page-date { color:var(--muted); font-size:13px; }
 .page-content img { max-width:100%; height:auto; border-radius:8px; }

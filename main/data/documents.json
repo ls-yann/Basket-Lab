@@ -365,24 +365,24 @@
     "category": "Ressources"
   },
   {
-    "name": "Clinic Tonagel Playing Defense 1",
+    "name": "Clinic Greg Tonagel — Playing Defense 1",
     "file": "documents/Clinic Tonagel Playing Defense 1.pdf",
-    "category": "Défense"
+    "category": "Clinic"
   },
   {
-    "name": "Clinic Tonagel Playing Defense 2",
+    "name": "Clinic Greg Tonagel — Playing Defense 2",
     "file": "documents/Clinic Tonagel Playing Defense 2.pdf",
-    "category": "Défense"
+    "category": "Clinic"
   },
   {
-    "name": "Clinic Tonagel Playing Defense 3",
+    "name": "Clinic Greg Tonagel — Playing Defense 3",
     "file": "documents/Clinic Tonagel Playing Defense 3.pdf",
-    "category": "Défense"
+    "category": "Clinic"
   },
   {
-    "name": "Clinic Tonagel Playing Defense 4",
+    "name": "Clinic Greg Tonagel — Playing Defense 4",
     "file": "documents/Clinic Tonagel Playing Defense 4.pdf",
-    "category": "Défense"
+    "category": "Clinic"
   },
   {
     "name": "Crunch Time 01",
@@ -672,7 +672,7 @@
   {
     "name": "Notes du clinic Paul Vervaek 11-11-08",
     "file": "documents/Notes du clinic Paul Vervaek 11-11-08.pdf",
-    "category": "Clinics"
+    "category": "Clinic"
   },
   {
     "name": "Nouvelle liste complète pour site",
@@ -917,7 +917,7 @@
   {
     "name": "Reprise de principes contre zone",
     "file": "documents/Reprise de principes contre zone.pdf",
-    "category": "Reprise"
+    "category": "Physique"
   },
   {
     "name": "Réaction offensive sur les écrans - Yvan FASSOTTE 1 de 2",
@@ -1166,7 +1166,7 @@
   },
   {
     "name": "Programme reprise",
-    "category": "Reprise",
+    "category": "Physique",
     "file": "documents/Reprise/Programme reprise.pdf"
   }
 ]

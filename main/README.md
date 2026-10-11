@@ -10,7 +10,8 @@ main/
 ├── pages/                  # Fiches HTML normalisées et imprimables
 ├── documents/              # Ressources PDF
 ├── data/
-│   └── documents.json      # Index des PDF pour la bibliothèque
+│   ├── documents.json      # Index des PDF pour la bibliothèque
+│   └── trainings.json      # Index des fiches HTML affichées sur l'accueil
 ├── tools/
 │   ├── document-import.html # Assistant graphique d'import
 │   └── document-import.js
@@ -22,7 +23,28 @@ main/
     └── images/             # Schémas et illustrations des fiches
 ```
 
-Les fichiers historiques sont conservés dans `pages/` et `documents/`. Les pages HTML utilisent des chemins relatifs adaptés à cette nouvelle arborescence.
+Les fichiers historiques sont conservés dans `pages/` et `documents/`. Les cartes de l'accueil ne contiennent plus leurs liens en dur dans le JavaScript : `data/trainings.json` est la source unique du titre, de la description et du chemin de chaque fiche HTML. Le champ `file` correspond toujours au fichier réellement ouvert.
+
+## Modifier le titre ou la catégorie d'une carte
+
+Pour une fiche HTML, modifier l'objet correspondant dans `main/data/trainings.json` :
+
+```json
+{
+  "id": 1,
+  "title": "Shoot-09",
+  "category": "Shoots",
+  "description": "Tir après démarquage et écran vers le haut.",
+  "file": "pages/drill-semaine-80.html",
+  "type": "html"
+}
+```
+
+Le champ `file` ne doit pas changer si le fichier n'est pas déplacé. Pour que le titre affiché dans la fiche soit identique à celui de la carte, modifier également `<title>` et `<h1 class="page-title">` dans le fichier HTML. La catégorie affichée dans l'en-tête se trouve dans `<div class="page-category">`.
+
+Pour un PDF, modifier l'objet correspondant dans `main/data/documents.json` (`name`, `category` et `file`). Les catégories doivent reprendre les familles du contenu ou de l'arborescence : `Shoots`, `Passes`, `Fastbreak`, `Clinic`, `Transition défensive`, etc. Les fichiers de Greg Tonagel sont ainsi classés `Clinic`.
+
+Après toute modification, vérifier que le chemin `file` existe bien, puis recharger la bibliothèque. Aucun changement n'est nécessaire dans `app.js`.
 
 La bibliothèque principale regroupe les 234 PDF et les fiches HTML éditoriales. Les catégories de chaque PDF sont enregistrées dans `data/documents.json` et les compteurs des filtres sont calculés à partir de toutes les ressources, pas à partir de valeurs statiques.
 
@@ -34,11 +56,7 @@ Pour ajouter un PDF, ouvrir `tools/document-import.html`, choisir une catégorie
 Procédure complète
 Après avoir utilisé l’outil :
 
-créer le dossier indiqué, par exemple :
-
-```main/documents/Défense/```
-
-y déposer le PDF ;
+déposer le PDF dans `main/documents/` avec le nom indiqué ;
 ajouter l’entrée générée dans :
 ```main/data/documents.json```
 

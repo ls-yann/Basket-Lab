@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Shoot-09",
+    "category": "Attaque",
+    "level": "Intermédiaire",
+    "duration": 20,
+    "description": "Tir après démarquage et écran vers le haut.",
+    "file": "pages/drill-semaine-80.html",
+    "icon": "◌",
+    "type": "html"
+  },
+  {
+    "id": 2,
+    "title": "Transition défensive-11",
+    "category": "Défense",
+    "level": "Avancé",
+    "duration": 25,
+    "description": "Transition défensive et fermeture de la baseline.",
+    "file": "pages/drill-semaine-100.html",
+    "icon": "◇",
+    "type": "html"
+  },
+  {
+    "id": 3,
+    "title": "Échauffement-09",
+    "category": "Échauffement",
+    "level": "Débutant",
+    "duration": 15,
+    "description": "Dribble en zigzag, accélération et jump shoot.",
+    "file": "pages/drill-semaine-71.html",
+    "icon": "↯",
+    "type": "html"
+  },
+  {
+    "id": 4,
+    "title": "Conditionnement physique-11",
+    "category": "Physique",
+    "level": "Intermédiaire",
+    "duration": 35,
+    "description": "Parcours complet de conditionnement physique.",
+    "file": "pages/drill-semaine-96.html",
+    "icon": "↗",
+    "type": "html"
+  },
+  {
+    "id": 5,
+    "title": "Fastbreak-08",
+    "category": "Attaque",
+    "level": "Intermédiaire",
+    "duration": 25,
+    "description": "Transition offensive en situation de surnombre 3 contre 2.",
+    "file": "pages/drill-semaine-68.html",
+    "icon": "△",
+    "type": "html"
+  },
+  {
+    "id": 6,
+    "title": "Passe-06",
+    "category": "Passes",
+    "level": "Débutant",
+    "duration": 15,
+    "description": "Enchaînement de passes en mouvement à quatre files.",
+    "file": "pages/drill-semaine-43.html",
+    "icon": "↗",
+    "type": "html"
+  },
+  {
+    "id": 7,
+    "title": "Un contre un-02",
+    "category": "Attaque",
+    "level": "Débutant",
+    "duration": 20,
+    "description": "Tir après close-out et duel pour le rebond.",
+    "file": "pages/drill-semaine-6ter.html",
+    "icon": "○",
+    "type": "html"
+  },
+  {
+    "id": 8,
+    "title": "Transition offensive-01",
+    "category": "Attaque",
+    "level": "Intermédiaire",
+    "duration": 25,
+    "description": "Première passe, course et jump shoot en transition.",
+    "file": "pages/drill-semaine-157.html",
+    "icon": "▱",
+    "type": "html"
+  },
+  {
+    "id": 9,
+    "title": "Conditionnement physique-02",
+    "category": "Physique",
+    "level": "Débutant",
+    "duration": 10,
+    "description": "Parcours de dribble, glissements défensifs et sprints.",
+    "file": "pages/drill-semaine-10bis.html",
+    "icon": "✦",
+    "type": "html"
+  }
+]
